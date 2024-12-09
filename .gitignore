@@ -1,1 +1,5 @@
 __pycache__/hello.cpython-310.pyc
+az/.terraform/
+az/terraform.tfstate.backup
+az/terraform.tfstate
+az/.terraform.lock.hcl
