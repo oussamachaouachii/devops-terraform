@@ -14,14 +14,15 @@ pipeline {
                 sh 'docker push tp4terraform.azurecr.io/flask-app'
             }
         }
-        stage('Test') {
+        stage('Testing') {
             steps {
                 echo 'Testing..'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                sh 'terraform init'
+                sh 'terraform apply --auto-approve'
             }
         }
     }
