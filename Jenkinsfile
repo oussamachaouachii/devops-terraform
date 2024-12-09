@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        TF_VAR_password = credentials('password')
+    }
 
     stages {
         
